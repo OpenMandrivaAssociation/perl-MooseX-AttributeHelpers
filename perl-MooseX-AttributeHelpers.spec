@@ -1,15 +1,14 @@
-%define module   MooseX-AttributeHelpers
-%define version    0.20
-%define release    %mkrel 1
+%define upstream_name       MooseX-AttributeHelpers
+%define upstream_version    0.21
 
-Name:       perl-%{module}
-Version:    %{version}
-Release:    %{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 License:    GPL or Artistic
 Group:      Development/Perl
 Summary:    Extend your attribute interfaces
-Url:        http://search.cpan.org/dist/%{module}
-Source:     http://www.cpan.org/modules/by-module/MooseX/%{module}-%{version}.tar.gz
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source:     http://www.cpan.org/modules/by-module/MooseX/%{upstream_name}-%{upstream_version}.tar.gz
 BuildRequires: perl(ExtUtils::MakeMaker)
 BuildRequires: perl(Moose)
 BuildRequires: perl(Test::Exception)
@@ -26,7 +25,7 @@ As seen in the the /SYNOPSIS manpage, you specify the extension via the
 'metaclass' parameter. Available meta classes are:
 
 %prep
-%setup -q -n %{module}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version} 
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
