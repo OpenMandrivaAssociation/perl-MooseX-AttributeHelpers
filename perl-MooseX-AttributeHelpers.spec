@@ -8,7 +8,7 @@ License:	GPL or Artistic
 Group:		Development/Perl
 Summary:	Extend your attribute interfaces
 
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source:		http://www.cpan.org/modules/by-module/MooseX/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
